@@ -2,6 +2,10 @@
 
 A modern, animated, responsive personal portfolio built with **HTML, CSS, and vanilla JavaScript**. No frameworks, build tools, or package installation required.
 
+## Live Portfolio
+
+[Visit my portfolio](https://portfolio-bay-pi-94.vercel.app/)
+
 ## Open locally
 
 1. Download and unzip the portfolio folder.
