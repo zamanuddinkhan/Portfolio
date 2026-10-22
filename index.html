@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zamanuddin Khan is a Python developer and aspiring full-stack software engineer exploring AI, backend development, and modern web technologies."
+    />
+    <meta name="theme-color" content="#080e18" />
+    <meta property="og:title" content="Zamanuddin Khan | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Python developer. Aspiring full-stack engineer. Building, learning, and exploring AI."
+    />
+    <meta property="og:type" content="website" />
+    <title>Zamanuddin Khan | Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="reading-progress" aria-hidden="true">
+      <span id="scrollProgress"></span>
+    </div>
+    <div class="ambient-glow ambient-one" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="shell header-inner">
+        <a class="brand" href="#home" aria-label="Zamanuddin Khan, go to home">
+          <span class="brand-mark" aria-hidden="true"
+            ><span>Z<span class="brand-dot">.</span></span></span
+          >
+          <span class="brand-name">zamanuddin<span> / dev</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#learning">Learning</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-button theme-toggle"
+            id="themeToggle"
+            aria-label="Switch to light theme"
+            title="Toggle color theme"
+          >
+            <svg
+              class="theme-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.6 14.2A8.7 8.7 0 0 1 9.8 3.4 8.7 8.7 0 1 0 20.6 14.2Z"
+              />
+            </svg>
+            <svg
+              class="theme-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              />
+            </svg>
+          </button>
+          <a
+            class="header-cta"
+            href="https://drive.google.com/file/d/11Vg9_0ZHwb4As4B9bjVhQOaCoJF7WWgO/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="menu-button icon-button"
+            id="menuToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+            aria-label="Open navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="Mobile navigation"
+        inert
+      >
+        <a href="#home">Home</a><a href="#about">About</a
+        ><a href="#skills">Skills</a><a href="#learning">Learning</a
+        ><a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        id="home"
+        class="hero section-anchor"
+        aria-labelledby="heroTitle"
+      >
+        <canvas id="heroParticles" aria-hidden="true"></canvas>
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow hero-eyebrow reveal">
+              <span class="live-dot"></span> HELLO, WORLD!
+              <span class="eyebrow-divider">/</span> WELCOME TO MY SPACE
+            </div>
+            <div class="hero-heading reveal delay-1">
+              <p class="hero-intro">Hey there, I'm</p>
+              <h1 id="heroTitle">
+                Zamanuddin
+                <span class="gradient-text"
+                  >Khan<span class="period">.</span></span
+                >
+              </h1>
+            </div>
+            <div class="role-line reveal delay-2">
+              <span class="role-prefix">&gt;</span>
+              <span id="typingText" class="typed-text">Python Developer</span
+              ><span class="caret" aria-hidden="true"></span>
+            </div>
+            <p class="hero-description reveal delay-2">
+              I turn curiosity into code. A final-year Computer Science student
+              building useful web experiences, sharpening my Python skills, and
+              exploring what's possible with AI.
+            </p>
+            <div class="hero-buttons reveal delay-3">
+              <a class="button button-primary" href="#about"
+                >Explore my world <span aria-hidden="true">↗</span></a
+              >
+              <a class="button button-ghost" href="#contact"
+                >Let's connect <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="hero-socials reveal delay-3" aria-label="Social links">
+              <a
+                href="https://github.com/zamanuddinkhan"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
+                >GitHub <span aria-hidden="true">↗</span></a
+              >
+              <span class="social-separator" aria-hidden="true"></span>
+              <a
+                href="https://www.linkedin.com/in/zamanuddin-khan"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+                >LinkedIn <span aria-hidden="true">↗</span></a
+              >
+              <span class="social-separator" aria-hidden="true"></span>
+              <a
+                href="mailto:zamanuddinkhan1@gmail.com"
+                aria-label="Email Zamanuddin"
+                >Email <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+
+          <div
+            class="hero-visual reveal delay-2"
+            aria-label="Portrait of Zamanuddin Khan"
+          >
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <div class="floating-badge badge-python">
+              <span class="float-icon">Py</span> Python
+              <span class="badge-spark">✦</span>
+            </div>
+            <div class="floating-badge badge-ai">
+              <span class="float-icon ai-icon">✳</span> AI Explorer
+            </div>
+            <figure class="profile-frame">
+              <img
+                class="profile-image"
+                src="assets/images/zaman.jpg"
+                alt="Zamanuddin Khan speaking at a podium"
+                width="460"
+                height="460"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </figure>
+            <div class="visual-bottom-label">
+              CREATING WITH PURPOSE <span>✳</span> LEARNING EVERY DAY
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to about section"
+          ><span class="scroll-mouse"><span></span></span> SCROLL TO EXPLORE</a
+        >
+      </section>
+
+      <div class="ticker-band" aria-label="Areas of interest">
+        <div class="ticker-track" aria-hidden="true">
+          <span>PYTHON DEVELOPMENT</span><b>✳</b
+          ><span>FULL-STACK ENGINEERING</span><b>✳</b
+          ><span>ARTIFICIAL INTELLIGENCE</span><b>✳</b
+          ><span>BACKEND DEVELOPMENT</span><b>✳</b
+          ><span>CONTINUOUS LEARNING</span><b>✳</b
+          ><span>PYTHON DEVELOPMENT</span><b>✳</b
+          ><span>FULL-STACK ENGINEERING</span><b>✳</b
+          ><span>ARTIFICIAL INTELLIGENCE</span><b>✳</b
+          ><span>BACKEND DEVELOPMENT</span><b>✳</b
+          ><span>CONTINUOUS LEARNING</span><b>✳</b>
+        </div>
+      </div>
+
+      <section id="about" class="section about-section section-anchor">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <div class="section-eyebrow">
+              <span>01</span> / A LITTLE ABOUT ME
+            </div>
+            <h2>
+              Curious by nature.<br /><span class="muted-heading"
+                >Developer by choice.</span
+              >
+            </h2>
+          </div>
+          <div class="about-layout">
+            <div class="about-summary reveal">
+              <div class="about-card-stamp">
+                <span>✳</span> A BIT ABOUT MY JOURNEY
+              </div>
+              <p>
+                I'm a final-year
+                <strong
+                  >B.Tech Computer Science &amp; Engineering student</strong
+                >
+                who loves figuring out how things work and turning ideas into
+                real applications.
+              </p>
+              <p>
+                My interests live at the intersection of
+                <strong
+                  >Python, backend engineering, web development, and artificial
+                  intelligence.</strong
+                >
+                I enjoy solving problems, experimenting with modern tools, and
+                getting a little better with every project.
+              </p>
+              <p class="about-highlight">
+                My goal? To grow into a skilled software engineer and build
+                products that make a meaningful difference.
+              </p>
+              <a
+                class="text-arrow"
+                href="https://drive.google.com/file/d/11Vg9_0ZHwb4As4B9bjVhQOaCoJF7WWgO/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                >A closer look at my resume <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="about-bento">
+              <article class="bento-card bento-card-large reveal delay-1">
+                <div class="bento-icon">&lt;/&gt;</div>
+                <span class="bento-label">MY FOUNDATION</span>
+                <h3>Built on curiosity.<br />Powered by <em>code.</em></h3>
+                <p>
+                  Exploring software engineering from the browser to the
+                  backend.
+                </p>
+                <div class="bento-decor" aria-hidden="true">{ }</div>
+              </article>
+              <article class="bento-card bento-card-small reveal delay-2">
+                <div class="bento-illustration">🐍</div>
+                <h3>Python first</h3>
+                <p>My go-to language for building and learning.</p>
+              </article>
+              <article
+                class="bento-card bento-card-small violet-card reveal delay-3"
+              >
+                <div class="bento-illustration">✦</div>
+                <h3>Always exploring</h3>
+                <p>AI, LLMs, and what's coming next.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="section skills-section section-anchor"
+        aria-labelledby="toolkitTitle"
+      >
+        <div class="shell">
+          <div class="section-heading section-heading-inline reveal">
+            <div>
+              <div class="section-eyebrow"><span>02</span> / MY TOOLKIT</div>
+              <h2 id="toolkitTitle">
+                Tools I’m building <span class="gradient-text">with.</span>
+              </h2>
+            </div>
+            <p>
+              My technical toolkit, with learning areas clearly marked. Always
+              room to grow.
+            </p>
+          </div>
+          <div class="toolkit-grid">
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">01</span>Programming languages
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Python</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>C</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>C++</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>HTML</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">02</span>Frontend development
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>HTML5</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>CSS3</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>JavaScript</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">03</span>Backend &amp; frameworks
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/django/django-plain.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Django</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>FastAPI</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3><span class="toolkit-number">04</span>Databases</h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>MySQL</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>PostgreSQL</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3><span class="toolkit-number">05</span>Development tools</h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Git</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>GitHub</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>VS Code</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">06</span>DevOps &amp; cloud ·
+                learning
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Docker</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/kubernetes/kubernetes-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Kubernetes</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">07</span>Python libraries &amp;
+                testing
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>NumPy</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pandas/pandas-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Pandas</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytest/pytest-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>PyTest</span>
+                </li>
+              </ul>
+            </article>
+            <article class="toolkit-card">
+              <h3>
+                <span class="toolkit-number">08</span>Design &amp; collaboration
+              </h3>
+              <ul class="toolkit-tools" role="list">
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Figma</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/notion/notion-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Notion</span>
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/slack/slack-original.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                    loading="lazy"
+                    decoding="async"
+                  /><span>Slack</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="learning" class="section learning-section section-anchor">
+        <div class="shell learning-layout">
+          <div class="learning-intro reveal">
+            <div class="section-eyebrow"><span>03</span> / WHAT'S NEXT</div>
+            <h2>Forever a<br /><span class="gradient-text">student.</span></h2>
+            <p>
+              Technology never stands still, and neither does my curiosity.
+              Here's what I'm focusing on right now.
+            </p>
+            <div class="learning-note">
+              <span class="learning-note-icon">↗</span
+              ><span
+                >Small steps, every day.<br /><strong
+                  >That's how growth happens.</strong
+                ></span
+              >
+            </div>
+          </div>
+          <div class="learning-list">
+            <article class="learning-item reveal">
+              <span class="learning-number">01</span
+              ><span class="learning-item-icon">🐍</span>
+              <div>
+                <h3>Advanced Python</h3>
+                <p>Deepening my programming foundations.</p>
+              </div>
+              <span class="learning-arrow">↗</span>
+            </article>
+            <article class="learning-item reveal">
+              <span class="learning-number">02</span
+              ><span class="learning-item-icon">⚡</span>
+              <div>
+                <h3>FastAPI</h3>
+                <p>Building modern, reliable APIs.</p>
+              </div>
+              <span class="learning-arrow">↗</span>
+            </article>
+            <article class="learning-item reveal">
+              <span class="learning-number">03</span
+              ><span class="learning-item-icon">🧩</span>
+              <div>
+                <h3>Data Structures &amp; Algorithms</h3>
+                <p>Thinking clearly and solving problems efficiently.</p>
+              </div>
+              <span class="learning-arrow">↗</span>
+            </article>
+            <article class="learning-item reveal">
+              <span class="learning-number">04</span
+              ><span class="learning-item-icon">🔐</span>
+              <div>
+                <h3>Authentication &amp; Authorization</h3>
+                <p>Understanding how to build more secure apps.</p>
+              </div>
+              <span class="learning-arrow">↗</span>
+            </article>
+            <article class="learning-item reveal">
+              <span class="learning-number">05</span
+              ><span class="learning-item-icon">✳</span>
+              <div>
+                <h3>AI &amp; LLM Applications</h3>
+                <p>Exploring intelligent software and real-world use cases.</p>
+              </div>
+              <span class="learning-arrow">↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section philosophy-section"
+        aria-labelledby="philosophyTitle"
+      >
+        <div class="shell">
+          <div class="section-heading section-heading-inline reveal">
+            <div>
+              <div class="section-eyebrow"><span>04</span> / MY APPROACH</div>
+              <h2 id="philosophyTitle">
+                The way I <span class="muted-heading">think.</span>
+              </h2>
+            </div>
+            <p>
+              More than just writing code, it's about how you approach a
+              problem.
+            </p>
+          </div>
+          <div class="principles-grid">
+            <article class="principle-card reveal">
+              <span class="principle-number">/ 01</span>
+              <div class="principle-symbol">{ }</div>
+              <h3>Build with purpose.</h3>
+              <p>Create practical solutions, not just lines of code.</p>
+              <span class="principle-line"></span>
+            </article>
+            <article class="principle-card reveal delay-1">
+              <span class="principle-number">/ 02</span>
+              <div class="principle-symbol">∞</div>
+              <h3>Keep learning.</h3>
+              <p>Stay curious, experiment often, and improve every day.</p>
+              <span class="principle-line"></span>
+            </article>
+            <article class="principle-card reveal delay-2">
+              <span class="principle-number">/ 03</span>
+              <div class="principle-symbol">↗</div>
+              <h3>Think beyond the task.</h3>
+              <p>Look for the bigger picture and build for people.</p>
+              <span class="principle-line"></span>
+            </article>
+          </div>
+          <div class="github-panel reveal">
+            <div class="github-panel-heading">
+              <div>
+                <span class="section-eyebrow">GITHUB / ACTIVITY</span>
+                <h3>Code in motion<span class="gradient-text">.</span></h3>
+              </div>
+              <a
+                class="text-arrow"
+                href="https://github.com/zamanuddinkhan"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See my GitHub <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="snake-image-wrap">
+              <img
+                src="https://raw.githubusercontent.com/zamanuddinkhan/zamanuddinkhan/output/github-contribution-grid-snake-dark.svg"
+                alt="Animated GitHub contribution snake for Zamanuddin Khan"
+                loading="lazy"
+                id="contributionSnake"
+              />
+              <p id="snakeFallback" hidden>
+                GitHub contribution graphic is unavailable right now.
+                <a
+                  href="https://github.com/zamanuddinkhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View my activity on GitHub ↗</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section section-anchor">
+        <div class="shell">
+          <div class="contact-shell reveal">
+            <div class="contact-copy">
+              <div class="section-eyebrow"><span>05</span> / GET IN TOUCH</div>
+              <h2>
+                Have an idea?<br /><span class="gradient-text"
+                  >Let's talk.</span
+                >
+              </h2>
+              <p>
+                Whether it's a project, a question, or just a friendly hello,
+                I'd love to hear from you.
+              </p>
+              <a class="contact-email" href="mailto:zamanuddinkhan1@gmail.com"
+                >zamanuddinkhan1@gmail.com <span aria-hidden="true">↗</span></a
+              >
+              <div class="contact-socials">
+                <a
+                  href="https://www.linkedin.com/in/zamanuddin-khan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn ↗</a
+                ><a
+                  href="https://github.com/zamanuddinkhan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub ↗</a
+                >
+              </div>
+            </div>
+            <div class="contact-form-wrap">
+              <div class="form-topline">
+                <span class="form-led"></span> NEW MESSAGE
+                <span class="form-top-right">✳</span>
+              </div>
+              <form id="contactForm" novalidate>
+                <div class="form-row">
+                  <label for="senderName">Your name</label
+                  ><input
+                    id="senderName"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Your name"
+                    maxlength="100"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="senderEmail">Email address</label
+                  ><input
+                    id="senderEmail"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    maxlength="254"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="senderMessage">Your message</label
+                  ><textarea
+                    id="senderMessage"
+                    name="message"
+                    rows="4"
+                    maxlength="1500"
+                    placeholder="Tell me what's on your mind..."
+                    required
+                  ></textarea>
+                </div>
+                <p
+                  id="formFeedback"
+                  class="form-feedback"
+                  aria-live="polite"
+                ></p>
+                <button class="button button-primary form-submit" type="submit">
+                  Compose message <span aria-hidden="true">↗</span>
+                </button>
+                <p class="form-note">
+                  This opens your email app with the message prefilled. No
+                  information is stored here.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">Z<span>.</span></a
+          ><span>Crafted with curiosity &amp; a little caffeine.</span>
+        </div>
+        <div class="footer-end">
+          <span>© <span id="currentYear">2026</span> Zamanuddin Khan</span
+          ><a href="#home" class="back-top">BACK TO TOP ↑</a>
+        </div>
+      </div>
+      <div class="shell footer-signoff">
+        CODE <span>✳</span> LEARN <span>✳</span> BUILD <span>✳</span> REPEAT.
+      </div>
+    </footer>
+  </body>
+</html>
