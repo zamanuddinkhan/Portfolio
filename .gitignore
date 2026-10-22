@@ -1,0 +1,32 @@
+# Local dependencies and package caches
+node_modules/
+.npm-cache/
+.cache/
+
+# Secrets (keep a sanitized example in source control)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated output and logs
+dist/
+build/
+coverage/
+*.log
+
+# Machine-specific editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Local preview and automation artifacts
+playwright-report/
+test-results/
+.browser-preview/
+.browser-preview-*.png
